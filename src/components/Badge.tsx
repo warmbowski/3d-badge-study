@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { useEffect, useRef, useState } from "react";
-import { extend, useFrame, ReactThreeFiber } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
 import {
   BallCollider,
   CuboidCollider,
@@ -10,27 +10,9 @@ import {
   useRopeJoint,
   useSphericalJoint,
 } from "@react-three/rapier";
-import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 import { Card } from "./Card";
 import { Lanyard } from "./Lanyard";
-
-extend({ MeshLineGeometry, MeshLineMaterial });
-
-declare global {
-  // eslint-disable-next-line @typescript-eslint/no-namespace
-  namespace JSX {
-    interface IntrinsicElements {
-      meshLineGeometry: ReactThreeFiber.Object3DNode<
-        MeshLineGeometry,
-        typeof MeshLineGeometry
-      >;
-      meshLineMaterial: ReactThreeFiber.Object3DNode<
-        MeshLineMaterial,
-        typeof MeshLineMaterial
-      >;
-    }
-  }
-}
+import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 
 interface RigidBodyExtended extends RapierRigidBody {
   lerped?: THREE.Vector3;

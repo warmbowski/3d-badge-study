@@ -6,10 +6,9 @@ import {
   ReactThreeFiber,
   useThree,
 } from "@react-three/fiber";
+
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
-
 extend({ MeshLineGeometry, MeshLineMaterial });
-
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace JSX {
