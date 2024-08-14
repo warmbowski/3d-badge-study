@@ -2,6 +2,8 @@
 
 study of https://vercel.com/blog/building-an-interactive-3d-event-badge-with-react-three-fiber
 
+`---`
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
